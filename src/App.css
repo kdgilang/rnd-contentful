@@ -1,25 +1,101 @@
+a {
+  color: #333333;
+}
 .App {
-  text-align: center;
+  background-color: #efefef;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.logo {
+  width: 200px;
 }
-
-.App-header {
-  background-color: #282c34;
+.header-wrapper {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
+.App-header {
+  background-color: #ffffff;
+  padding: 18px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+.App-header ul {
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+.App-header ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+.App-header ul li a {
+  font-weight: 600;
+  position: relative;
+  text-decoration: none;
+}
+.App-header ul li a:before {
+  background-color: #333;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 0;
+  position: absolute;
+  transition: all 0.3s ease;
+  width: 0;
+}
+.App-header ul li a:hover:before {
+  width: 100%;
+}
 .App-link {
   color: #61dafb;
+}
+.media-home {
+  height: 100vh;
+  overflow: hidden;
+}
+.media-home .caption {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+.media-home .caption .text {
+  color: #fff;
+  font-size: 80px;
+  font-weight: 600;
+  opacity: 1;
+  text-transform: uppercase;
+}
+.video {
+  position: relative;
+  padding-bottom: 55%;
+  padding-top: 25px;
+  height: 0;
+}
+.video iframe {
+  /*pointer-events: none;*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.overlay {
+  background: rgba(0,0,0,0.5) url(./overlay.png);
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+}
+.section-media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
 }
 
 @keyframes App-logo-spin {
