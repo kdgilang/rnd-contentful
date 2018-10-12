@@ -7,7 +7,10 @@ a {
 .logo {
   width: 200px;
 }
-.header-wrapper {
+#home .header-wrapper {
+  min-height: 100vh;
+}
+#blog {
   min-height: 100vh;
 }
 .App-header {
@@ -17,21 +20,21 @@ a {
   top: 0;
   z-index: 2;
 }
-.App-header ul {
+.menu {
   margin: 0;
   padding: 0;
   text-align: right;
 }
-.App-header ul li {
+.menu li {
   display: inline-block;
   margin-right: 20px;
 }
-.App-header ul li a {
+.menu li a {
   font-weight: 600;
   position: relative;
   text-decoration: none;
 }
-.App-header ul li a:before {
+.menu li a:before {
   background-color: #333;
   bottom: 0;
   content: "";
@@ -42,11 +45,20 @@ a {
   transition: all 0.3s ease;
   width: 0;
 }
-.App-header ul li a:hover:before {
+.menu li a:hover:before {
   width: 100%;
 }
-.App-link {
-  color: #61dafb;
+.fix-header {
+  padding: 5rem 0 10rem;
+}
+.App-footer {
+  background-color: #fff;
+  padding: 1.3rem
+}
+.App-footer ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 .media-home {
   height: 100vh;
@@ -66,6 +78,13 @@ a {
   font-weight: 600;
   opacity: 1;
   text-transform: uppercase;
+}
+.caption #line-caption { 
+  background-color: #fff;
+  height: 4px;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .video {
   position: relative;
@@ -97,7 +116,147 @@ a {
   width: 100%;
   z-index: 1;
 }
-
+.panel {
+  border-radius: 3px;
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(0,0,0,0.13);
+  padding: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+.panel a {
+  color: #1ca4bf;
+}
+.panel h3 {
+  height: 1.5rem; 
+  font-size: 1.4rem;
+}
+.thumb {
+  overflow: hidden;
+  width: 100%;
+}
+.panel .thumb {
+  height: 12rem;
+  margin-bottom: 1.2rem;
+}
+.panel .text {
+  height: 9.5rem;
+  overflow: hidden;
+  width: 100%;
+  white-space: break-all;
+}
+.btn.btn-primary {
+  background-color: #333;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+}
+.item-single h1 {
+  margin-bottom: 1.5rem;
+}
+.item-single .panel .text {
+  height: auto;
+  overflow: visible;
+}
+.item-single .thumb {
+  height: auto;
+  overflow: visible;
+}
+.item-single .thumb img {
+  width: 100%;
+}
+.nav-page {
+  background-color: #333;
+  padding: 1.3rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.nav-page .menu {
+  text-align: left;
+}
+.nav-page .menu li a {
+  color: #fff;
+}
+.nav-page .menu li a:before {
+  background-color: #fff;
+}
+.text-quote {
+  color: #fff;
+  font-style: italic;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.thumb-quote {
+  position: relative;
+}
+.thumb-quote img {
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
+}
+.section-title {
+  display: inline-block;
+  position: relative;
+}
+.section-title:before {
+  background-color: #333;
+  content: "";
+  height: 4px;
+  width: 50%;
+  position: absolute;
+  left: 50%;
+  bottom: -12px;
+  transform: translateX(-50%);
+}
+.section:nth-child(even) {
+  background-color: #f7f7f7;
+}
+.content-accordion {
+  display: none;
+}
+.content-accordion .thumb {
+  height: 300px;
+}
+.content-accordion .thumb img {
+  width: 100%;
+}
+.content-accordion .text {
+  height: 300px;
+}
+.nav-accordion {
+  cursor: pointer;
+  position: relative;
+}
+.nav-accordion:before {
+  content: "";
+  background-color:  #ccc;
+  bottom: -15px;
+  height: 2px;
+  position: absolute;
+  width: 100%;
+}
+.nav-accordion .fs {
+  position: absolute;
+  right: 0;
+  font-size: 2rem;
+  transition: all 0.5s ease;
+}
+.nav-accordion.open .fs {
+  transform: rotate(180deg);
+}
+.content-quote .thumb {
+  height: 400px;
+}
+.content-quote .thumb img {
+  width: 100%;
+}
+.content-quote  h3 {
+  background-color: rgba(3,3,3, 0.5);
+  border-radius: 3px;
+  display: inline-block;
+  padding: 20px;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
