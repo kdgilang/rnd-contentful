@@ -257,11 +257,35 @@ a {
   display: inline-block;
   padding: 20px;
 }
+/*Image Beauty*/
+.c-img {
+  background-color: #333;
+  height: auto;
+  position: relative;
+  width: 100%;
+}
+.loader-img {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+  animation: Blink 1.2s alternate infinite;
+  top: 0;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+@keyframes Blink {
+  from {
+    background-color: #333;
+  }
+  to {
+    background-color: #ccc;
   }
 }

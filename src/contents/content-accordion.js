@@ -1,4 +1,5 @@
 import React from 'react';
+import ImageBeauty from '../components/ImageBeauty'
 
 export default ({content}) => {
 	if(content !== undefined) {
@@ -9,7 +10,7 @@ export default ({content}) => {
 					<div className="row">
 						<div className="col-12 col-sm-6">
 							<div className="thumb">
-								<img src={ content.heroImage.fields.file.url } />
+								<ImageBeauty src={content.heroImage.fields.file.url} alt="Accordion Picture"/>
 							</div>
 						</div>
 						<div className="col-12 col-sm-6">
