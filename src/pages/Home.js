@@ -46,7 +46,7 @@ class Home extends Component {
 						<ul className="menu">
 							<li><a className="btn-scroll" href="#section-1">Welcome</a></li>
 							<li><a className="btn-scroll" href="#section-2">Quote</a></li>
-							<li><a className="btn-scroll" href="#section-3">Our Project</a></li>
+							<li><a className="btn-scroll" href="#section-3">Our Blogs</a></li>
 							<li><a className="btn-scroll" href="#section-4">Contact</a></li>
 						</ul>
 					</div>
