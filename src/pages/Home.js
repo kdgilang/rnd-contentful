@@ -12,6 +12,7 @@ class Home extends Component {
 		this.state = {
 			post: null,
 			hasPost: false,
+			showCaption: false,
 			quote: null,
 			hasQuote: false,
 		}
@@ -28,7 +29,7 @@ class Home extends Component {
 							{this.theVideo()}
 						</div>
 						<div className="caption">
-							{ this.state.hasPost ? 
+							{ this.state.showCaption ? 
 								this.state.post.fields.caption.map((data, i)=> {
 									return this.state.post.fields.caption.length === (i+1)
 									? (<div className="text" key={i} id={'text'+(i+1)}>{data} <div id="line-caption"></div></div>) 
@@ -145,11 +146,11 @@ class Home extends Component {
 
 		client.getEntry('1EK7aWu9NyAyO0Mq6mUKmE').then((content) => {
 			if(content.fields) {
-				this.setState({post: content})
+				this.setState({post: content, hasPost: true})
+				this.jQuery();
 				setTimeout(()=>{
-					this.setState({hasPost: true})
+					this.setState({showCaption: true})
 					this.animateCaption();
-					this.jQuery();
 				}, 5000);
 			}
 		}).catch(console.error)
@@ -159,7 +160,6 @@ class Home extends Component {
 				this.setState({quote: content.items[0], hasQuote: true,})
 			}
 		}).catch(console.error)
-	
 	}
 	animateCaption() {
 		var tl = new TimelineLite({onComplete: restart});
