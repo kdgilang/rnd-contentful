@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Blog from './pages/Blog';
 import Single from './pages/Single';
 import Login from './pages/Login';
+import Maintenance from './pages/Maintenance';
 export default () => {
 	return (
 	  <main>
@@ -11,6 +12,7 @@ export default () => {
 	      <Route exact path='/' component={Home}/>
 	      <Route path='/blog' component={Blog} />
 	      <Route path='/single/:slug' component={Single}/>
+	      <Route path='/maintenance' component={Maintenance}/>
 	      <Route path='/login' component={Login}/>
 	    </Switch>
 	  </main>
